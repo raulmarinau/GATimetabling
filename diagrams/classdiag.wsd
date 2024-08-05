@@ -1,0 +1,45 @@
+@startuml
+
+title Class Diagram
+
+class Room {
+  +String number
+  +Int seating_capactiy
+}
+
+class MeetingTime {
+  +String id
+  +DateTime datetime
+}
+
+class Instructor {
+  +String id
+  +String name
+}
+
+class Course {
+  +String number
+  +String name
+  +Int max_number_of_students
+  +List<Instructor> instructors
+}
+
+class Department {
+  +String name
+  +List<Course> courses
+}
+
+class Class{
+  Int id
+  MeetingTime mt
+  Room room
+  Instructor inst
+}
+
+Course "1" *-down- "many" Instructor: has
+Department "1" *-down- "many" Course: has
+Class "1" *-down- "one" MeetingTime: has
+Class "1" *-down- "one" Room: has
+Class "1" *-down- "one" Instructor: has
+
+@enduml

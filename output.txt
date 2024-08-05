@@ -1,0 +1,691 @@
+
+**************************************************
+INPUT DATA INFORMATION
+**************************************************
+
+**************************************************
+Available departments
+**************************************************
+name : Computer Science, courses : ['Algorithmics', 'Databases']
+name : Applied Comp Sci, courses : ['Software enginnering', 'Python Programming', 'Computer Networks']
+name : Masters, courses : ['Machine Learning', 'Data Mining']
+
+**************************************************
+Available courses
+**************************************************
+Course no.: C1, ,Name: Algorithmics,Max no. of students: 25,Instructors: ['Teacher1', 'Teacher2']
+Course no.: C2, ,Name: Software enginnering,Max no. of students: 35,Instructors: ['Teacher1', 'Teacher2', 'Teacher3']
+Course no.: C3, ,Name: Databases,Max no. of students: 25,Instructors: ['Teacher1', 'Teacher2']
+Course no.: C4, ,Name: Python Programming,Max no. of students: 30,Instructors: ['Teacher3', 'Teacher4']
+Course no.: C5, ,Name: Machine Learning,Max no. of students: 35,Instructors: ['Teacher4']
+Course no.: C6, ,Name: Data Mining,Max no. of students: 45,Instructors: ['Teacher1', 'Teacher3']
+Course no.: C7, ,Name: Computer Networks,Max no. of students: 45,Instructors: ['Teacher2', 'Teacher4']
+
+**************************************************
+Available rooms
+**************************************************
+Room No: R1,Max seating capacity: 25
+Room No: R2,Max seating capacity: 45
+Room No: R3,Max seating capacity: 35
+
+**************************************************
+Available instructors
+**************************************************
+ID: I1,Name: Teacher1
+ID: I2,Name: Teacher2
+ID: I3,Name: Teacher3
+ID: I4,Name: Teacher4
+
+**************************************************
+Available meeting times
+**************************************************
+ID: MT1,Meeting Time: MWF 09:00 - 10:00
+ID: MT2,Meeting Time: MWF 10:00 - 11:00
+ID: MT3,Meeting Time: TTH 09:00 - 10:00
+ID: MT4,Meeting Time: TTH 10:00 - 11:00
+
+
+
+**************************************************
+Generation Number: 0
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R1,Teacher3,TTH 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher3,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher2,TTH 09:00 - 10:00]
+              [Masters,Machine Learning,R1,Teacher1,TTH 09:00 - 10:00]
+              [Masters,Data Mining,R2,Teacher2,TTH 09:00 - 10:00]
+           1  [Computer Science,Algorithmics,R1,Teacher2,TTH 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher3,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R3,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher3,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R2,Teacher2,TTH 09:00 - 10:00]
+           2  [Computer Science,Algorithmics,R2,Teacher2,TTH 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R3,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher3,MWF 09:00 - 10:00]
+              [Masters,Machine Learning,R3,Teacher2,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R2,Teacher4,TTH 09:00 - 10:00]
+           3  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           4  [Computer Science,Algorithmics,R3,Teacher4,MWF 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R3,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher4,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher1,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R1,Teacher4,MWF 10:00 - 11:00]
+           5  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R3,Teacher1,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R1,Teacher2,TTH 09:00 - 10:00]
+           6  [Computer Science,Algorithmics,R2,Teacher2,TTH 10:00 - 11:00]           0.25                3
+              [Computer Science,Databases,R2,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher4,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher4,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher4,MWF 09:00 - 10:00]
+              [Masters,Machine Learning,R2,Teacher4,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R1,Teacher1,MWF 09:00 - 10:00]
+           7  [Computer Science,Algorithmics,R3,Teacher4,MWF 09:00 - 10:00]           0.2                 4
+              [Computer Science,Databases,R1,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher4,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher1,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher4,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher1,TTH 10:00 - 11:00]
+           8  [Computer Science,Algorithmics,R1,Teacher1,MWF 09:00 - 10:00]           0.166667            5
+              [Computer Science,Databases,R1,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher3,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher3,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher1,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher2,MWF 09:00 - 10:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R1 (25)            Teacher3 (I3)      TTH 10:00 - 11:00 (MT4)
+        2  Computer Science  Databases (C3, 25)                    R2 (45)            Teacher3 (I3)      MWF 10:00 - 11:00 (MT2)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R3 (35)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R1 (25)            Teacher2 (I2)      TTH 09:00 - 10:00 (MT3)
+        6  Masters           Machine Learning (C5, 35)             R1 (25)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        7  Masters           Data Mining (C6, 45)                  R2 (45)            Teacher2 (I2)      TTH 09:00 - 10:00 (MT3)
+
+
+**************************************************
+Generation Number: 1
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           1  [Computer Science,Algorithmics,R1,Teacher2,TTH 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher3,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R2,Teacher2,TTH 09:00 - 10:00]
+           2  [Computer Science,Algorithmics,R1,Teacher3,TTH 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher3,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher2,TTH 09:00 - 10:00]
+              [Masters,Machine Learning,R1,Teacher1,TTH 09:00 - 10:00]
+              [Masters,Data Mining,R2,Teacher2,TTH 09:00 - 10:00]
+           3  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           4  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R3,Teacher1,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R1,Teacher2,TTH 09:00 - 10:00]
+           5  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.25                3
+              [Computer Science,Databases,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R3,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher4,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R1,Teacher4,MWF 10:00 - 11:00]
+           6  [Computer Science,Algorithmics,R3,Teacher4,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher1,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher4,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           7  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.2                 4
+              [Computer Science,Databases,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher4,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R1,Teacher1,MWF 09:00 - 10:00]
+           8  [Computer Science,Algorithmics,R1,Teacher3,MWF 09:00 - 10:00]           0.2                 4
+              [Computer Science,Databases,R2,Teacher3,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher3,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher1,TTH 10:00 - 11:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R2 (45)            Teacher3 (I3)      MWF 10:00 - 11:00 (MT2)
+        2  Computer Science  Databases (C3, 25)                    R1 (25)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R3 (35)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R2 (45)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        6  Masters           Machine Learning (C5, 35)             R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        7  Masters           Data Mining (C6, 45)                  R3 (35)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+
+
+**************************************************
+Generation Number: 2
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           1  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           2  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           3  [Computer Science,Algorithmics,R1,Teacher2,TTH 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher3,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher1,TTH 09:00 - 10:00]
+              [Masters,Data Mining,R2,Teacher2,TTH 09:00 - 10:00]
+           4  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           5  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           6  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R1,Teacher3,TTH 09:00 - 10:00]
+           7  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.2                 4
+              [Computer Science,Databases,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R1,Teacher2,TTH 09:00 - 10:00]
+           8  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.2                 4
+              [Computer Science,Databases,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher4,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R1,Teacher2,TTH 09:00 - 10:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R2 (45)            Teacher3 (I3)      MWF 10:00 - 11:00 (MT2)
+        2  Computer Science  Databases (C3, 25)                    R1 (25)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R3 (35)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R2 (45)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        6  Masters           Machine Learning (C5, 35)             R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        7  Masters           Data Mining (C6, 45)                  R3 (35)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+
+
+**************************************************
+Generation Number: 3
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           1  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R3,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           2  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher1,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           3  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           4  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher4,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           5  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           6  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher4,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           7  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           8  [Computer Science,Algorithmics,R1,Teacher3,MWF 10:00 - 11:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R3,Teacher1,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R2 (45)            Teacher3 (I3)      MWF 10:00 - 11:00 (MT2)
+        2  Computer Science  Databases (C3, 25)                    R1 (25)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R3 (35)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R2 (45)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        6  Masters           Machine Learning (C5, 35)             R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        7  Masters           Data Mining (C6, 45)                  R3 (35)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+
+
+**************************************************
+Generation Number: 4
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           1  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           2  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           3  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher1,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           4  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher1,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R1,Teacher4,MWF 10:00 - 11:00]
+           5  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           6  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher3,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           7  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher4,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           8  [Computer Science,Algorithmics,R1,Teacher3,MWF 10:00 - 11:00]           0.2                 4
+              [Computer Science,Databases,R3,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Machine Learning,R3,Teacher1,MWF 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R2 (45)            Teacher3 (I3)      MWF 10:00 - 11:00 (MT2)
+        2  Computer Science  Databases (C3, 25)                    R1 (25)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R3 (35)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R2 (45)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        6  Masters           Machine Learning (C5, 35)             R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        7  Masters           Data Mining (C6, 45)                  R3 (35)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+
+
+**************************************************
+Generation Number: 5
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           1  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           2  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           3  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           4  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher1,TTH 09:00 - 10:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           5  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher4,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           6  [Computer Science,Algorithmics,R1,Teacher4,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           7  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.25                3
+              [Computer Science,Databases,R3,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           8  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.2                 4
+              [Computer Science,Databases,R3,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R1,Teacher1,TTH 09:00 - 10:00]
+              [Masters,Machine Learning,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R2 (45)            Teacher3 (I3)      MWF 10:00 - 11:00 (MT2)
+        2  Computer Science  Databases (C3, 25)                    R1 (25)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R3 (35)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R2 (45)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        6  Masters           Machine Learning (C5, 35)             R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        7  Masters           Data Mining (C6, 45)                  R3 (35)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+
+
+**************************************************
+Generation Number: 6
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           1  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           2  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           3  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher3,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           4  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher4,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           5  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R3,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           6  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher4,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher2,TTH 10:00 - 11:00]
+           7  [Computer Science,Algorithmics,R2,Teacher1,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Computer Networks,R3,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Machine Learning,R3,Teacher2,TTH 10:00 - 11:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           8  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.25                3
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher3,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher4,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 09:00 - 10:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R2 (45)            Teacher3 (I3)      MWF 10:00 - 11:00 (MT2)
+        2  Computer Science  Databases (C3, 25)                    R1 (25)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R3 (35)            Teacher1 (I1)      TTH 09:00 - 10:00 (MT3)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R2 (45)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        6  Masters           Machine Learning (C5, 35)             R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        7  Masters           Data Mining (C6, 45)                  R3 (35)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+
+
+**************************************************
+Generation Number: 7
+**************************************************
+  Schedule #  Classes [dept, class, room, instructor, meeting-time]                    Fitness    Conflicts
+------------  ---------------------------------------------------------------------  ---------  -----------
+           0  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           1                   0
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R2,Teacher1,MWF 09:00 - 10:00]
+           1  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           2  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           3  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher3,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           4  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher2,TTH 10:00 - 11:00]
+           5  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.5                 1
+              [Computer Science,Databases,R2,Teacher3,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher3,MWF 10:00 - 11:00]
+           6  [Computer Science,Algorithmics,R2,Teacher2,TTH 09:00 - 10:00]           0.5                 1
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R2,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher2,TTH 10:00 - 11:00]
+           7  [Computer Science,Algorithmics,R3,Teacher1,MWF 09:00 - 10:00]           0.333333            2
+              [Computer Science,Databases,R1,Teacher4,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R1,Teacher1,MWF 09:00 - 10:00]
+              [Applied Comp Sci,Python Programming,R3,Teacher1,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+           8  [Computer Science,Algorithmics,R2,Teacher3,MWF 10:00 - 11:00]           0.333333            2
+              [Computer Science,Databases,R2,Teacher2,MWF 10:00 - 11:00]
+              [Applied Comp Sci,Software enginnering,R2,Teacher2,TTH 10:00 - 11:00]
+              [Applied Comp Sci,Python Programming,R1,Teacher1,TTH 09:00 - 10:00]
+              [Applied Comp Sci,Computer Networks,R2,Teacher4,MWF 10:00 - 11:00]
+              [Masters,Machine Learning,R2,Teacher1,MWF 09:00 - 10:00]
+              [Masters,Data Mining,R3,Teacher4,MWF 10:00 - 11:00]
+
+  Class #  Dept              Course (number, max # of students)    Room (capacity)    Instructor (Id)    Meeting Time
+---------  ----------------  ------------------------------------  -----------------  -----------------  -----------------------
+        1  Computer Science  Algorithmics (C1, 25)                 R3 (35)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        2  Computer Science  Databases (C3, 25)                    R2 (45)            Teacher3 (I3)      TTH 10:00 - 11:00 (MT4)
+        3  Applied Comp Sci  Software enginnering (C2, 35)         R2 (45)            Teacher2 (I2)      TTH 10:00 - 11:00 (MT4)
+        4  Applied Comp Sci  Python Programming (C4, 30)           R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        5  Applied Comp Sci  Computer Networks (C7, 45)            R2 (45)            Teacher4 (I4)      MWF 10:00 - 11:00 (MT2)
+        6  Masters           Machine Learning (C5, 35)             R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+        7  Masters           Data Mining (C6, 45)                  R2 (45)            Teacher1 (I1)      MWF 09:00 - 10:00 (MT1)
+
+
+**************************************************
+Solution Found in 8 generations
+**************************************************

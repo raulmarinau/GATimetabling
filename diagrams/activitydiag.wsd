@@ -1,0 +1,29 @@
+@startuml
+
+title Genetic algorithm 
+
+
+start
+
+:Create initial randomized population;
+:Sort by fitness;
+
+while (Best schedule satisfies constraints) is (No)
+  repeat
+    if (rand() < CROSSOVER_RATE) then (do crossover)
+      :Find parents through tournament selection;
+      :Apply crossover;
+    else (copy)
+      :Copy timetable at current index from original population;
+    endif
+    if (rand() < MUTATION_RATE) then (do mutation)
+      :Apply random mutation;
+    else (copy)
+      :Copy timetable at current index from original population;
+    endif
+  repeat while (for all timetables of the population)
+endwhile (Yes)
+
+stop
+
+@enduml
